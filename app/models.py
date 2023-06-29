@@ -14,13 +14,13 @@ from flask_marshmallow import Schema, fields
 @dataclass
 class Book(db.Model):
     print()
-    id = db.Column(db.Integer, primary_key=True)
-    authur_id = db.Column(db.Integer, nullable=True)
-    title = db.Column(db.TEXT, nullable=True)
-    cover_image = db.Column(db.TEXT, nullable=True)
-    pages = db.Column(db.Integer, nullable=True)
-    releasedate = db.Column(db.TEXT, nullable=True)
-    isbn = db.Column(db.TEXT, nullable=True)
+    id: int = db.Column(db.Integer, primary_key=True)
+    authur_id: int = db.Column(db.Integer, nullable=True)
+    title: str = db.Column(db.TEXT, nullable=True)
+    cover_image: str = db.Column(db.TEXT, nullable=True)
+    pages: int = db.Column(db.Integer, nullable=True)
+    releasedate: str = db.Column(db.TEXT, nullable=True)
+    isbn: str = db.Column(db.TEXT, nullable=True)
 
 
 class BookSchema(ma.Schema):
